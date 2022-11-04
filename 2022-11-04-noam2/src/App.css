@@ -1,0 +1,92 @@
+html {
+    background-color: rgb(16, 23, 40);
+    font-size: 15px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Titles CSS*/
+
+/* Animation CSS */
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateX(20vh);
+    visibility: hidden;
+    transition: opacity 3s ease-out, transform 2.5s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.fade-in-on-scroll-pics {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2.5s ease-out, transform 3s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-on-scroll-pics.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.from-right-fade {
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+.from-left-fade {
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.fade-in { 
+    animation: fadeIn 3.5s;
+}
+
+
+.float-object {
+    transform: translatey(10px);
+    animation: float 6s ease-in-out infinite;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(15px);
+    }
+    50% {
+        transform: translatey(-15px);
+    }
+    100% {
+        transform: translatey(15px);
+    }
+}
